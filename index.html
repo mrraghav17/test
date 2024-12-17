@@ -13,13 +13,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
   </head>
   <body>
-    <main>
+    <main class="mmain">
       <div class="d-flex">
         <div class="side-fixed">
           <div class="side-bar active">
             <header>
               <a href="#" class="logo-container">
-                <img src="assets/img/logo.png" alt="">
+               <h1>LOGO</h1>
               </a>
               <div class="close-btn d-lg-none">
                 <i class="fa-solid fa-x"></i>
@@ -28,7 +28,7 @@
             <div class="menu">
               <div class="item">
                 <a href="#">
-                  <i class="fas fa-desktop"></i>Dashboardd </a>
+                  <i class="fas fa-desktop"></i>Dashboard </a>
               </div>
               <div class="item">
                 <a class="sub-btn">
@@ -73,17 +73,17 @@
               
             </a>
 
-            <a href="#" class="message-noti d-none d-lg-block"><i class="fa-solid fa-message"></i></a>
 
 
-            <div class="menu-btn d-lg-none" style="visibility: visible;">
-              <i class="fas fa-bars"></i>
+
+            <div class="menu-btn" style="visibility: visible;">
+              <i class="fa-solid fa-user"></i>
             </div>
           </div>
-          <div class="mx-lg-4">
+          <div class="mx-lg-4 main-sec">
 
             <div class="page-heading mt-lg-3 mt-3">
-              <h2>Media Gallery</h2>
+              <h2>Media Gallery [Hover Image to Pop Out]</h2>
             </div>
             <nav class="mt-lg-4 mt-3">
 
@@ -831,17 +831,24 @@
           $(this).next(".sub-menu").slideToggle();
           $(this).find(".dropdown").toggleClass("rotate");
         });
-        //jquery for expand and collapse the sidebar
+        //jquery for active tab
+
         $(".menu-btn").click(function() {
           $(".side-fixed").addClass("active");
-          $(".menu-btn").css("visibility", "hidden");
+    
         });
-        $('.close-btn').click(function() {
+
+        $(".main-sec").click(function() {
           $('.side-fixed').removeClass('active');
-          $('.menu-btn').css("visibility", "visible");
+    
         });
+       
+       
       });
+
     </script>
+
+    
   </body>
 </html>
 <!-- partial -->

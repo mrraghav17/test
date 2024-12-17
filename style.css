@@ -148,6 +148,21 @@ header .logo-container img {
     align-items: center;
 
 }
+.side-fixed {
+
+    z-index: 55;
+    position: fixed;
+    top: 0;
+    width: 256px;
+    left: -256px;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+}
+
+.side-fixed.active {
+    left: 0;
+}
 
 .page-heading {
     padding: 10px 20px;
@@ -268,21 +283,7 @@ header .logo-container img {
 
 @media screen and (max-width: 992px) {
     
-    .side-fixed {
-
-        z-index: 55;
-        position: fixed;
-        top: 0;
-        width: 256px;
-        left: -256px;
-        overflow-y: auto;
-        transition: 0.6s ease;
-        transition-property: left;
-    }
-
-    .side-fixed.active {
-        left: 0;
-    }
+    
 
     .main-headding {
         padding: 19px 21px;
